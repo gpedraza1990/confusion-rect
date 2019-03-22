@@ -9,6 +9,11 @@ class Menu extends Component {
         this.state = {
            selectedDish: null
         };
+        console.log("Menu component constructor is invoke");
+    }
+
+    componentDidMount(){
+        console.log("Menu component componentDidMount is invoke");
     }
 
     onDishSelect(dish){
@@ -42,14 +47,14 @@ class Menu extends Component {
                         <Card onClick={()=> this.onDishSelect(dish)}>
                             <CardImg width="100%" src={dish.image} alt={dish.name} />
                             <CardImgOverlay>
-                                 <CardTitle heading>{dish.name}</CardTitle>
+                                 <CardTitle>{dish.name}</CardTitle>
                             </CardImgOverlay>
                         </Card>
                     </div>
                 );
             } 
         );
-
+        console.log("Menu component render is invoke");
         return (
             <div className="container">
                 <div className="row">
