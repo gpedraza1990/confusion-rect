@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, CardText, CardTitle, CardImg, CardBody, CardHeader} from 'reactstrap';
-
+import { Card, CardText, CardTitle, CardImg,Breadcrumb,BreadcrumbItem,  CardBody, CardHeader} from 'reactstrap';
+import {Link} from 'react-router-dom';
 
     
     
@@ -48,8 +48,24 @@ import { Card, CardText, CardTitle, CardImg, CardBody, CardHeader} from 'reactst
            return(
                 <div className="container"> 
                     <div className="row">
+                        <Breadcrumb>
+                            <BreadcrumbItem>
+                                <Link to ='/menu'>
+                                    Menu
+                                </Link>
+                            </BreadcrumbItem>
+                            <BreadcrumbItem active>
+                                {props.dish.name}
+                            </BreadcrumbItem>
+                        </Breadcrumb>
+                        <div className="col-12">
+                            <h3>{props.dish.name}</h3>
+                            <hr />
+                        </div>
+                    </div>
+                    <div className="row">
                         <RendeerDish dish={props.dish} />
-                        <RenderCommnets comments={props.dish.comments} />
+                        <RenderCommnets comments={props.comments} />
                     </div>
                 </div>
            );
