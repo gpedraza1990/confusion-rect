@@ -3,13 +3,15 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from "./HomeComponent"; 
 import Menu from './MenuComponent';
-import Dishdetail from "./DishdetailComponent ";
+import Dishdetail from "./DishdetailComponent";
 import Contact from './ContactComponent';
 import { DISHES } from "../shered/dishes";
 import { COMMENTS } from "../shered/comment";
 import { PROMOTIONS } from "../shered/promotions";
 import { LEADERS } from "../shered/leaders";
 import {Switch, Route, Redirect} from 'react-router-dom';
+import AboutComponent from "./AboutComponent";
+import About from './AboutComponent';
 
 
 class Main extends Component {
@@ -49,6 +51,7 @@ class Main extends Component {
             <Route exact path="/menu" component={()=> <Menu dishes={this.state.dishes} />} />
             <Route path="/menu/:dishId" component={DishWithId} />
             <Route exact path="/contactus" component={Contact}/>
+            <Route exact path="/aboutus" component={()=> <About leaders={this.state.leaders} />}/>
             <Redirect to="/home" />
         </Switch>
         <Footer/>
