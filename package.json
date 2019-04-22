@@ -8,9 +8,11 @@
     "font-awesome": "4.7.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
+    "react-redux": "5.0.7",
     "react-router-dom": "4.2.2",
     "react-scripts": "2.1.8",
     "reactstrap": "5.0.0",
+    "redux": "3.7.2",
     "resolve-pathname": "^2.2.0",
     "tiny-invariant": "^1.0.2",
     "value-equal": "^0.4.0"
